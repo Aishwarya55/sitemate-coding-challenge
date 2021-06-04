@@ -4,54 +4,64 @@
     </head>
     <style>
 
+        body{
+            padding: 16px;
+            background: rgba(0,0,0,0.08);
+        }
+
         #notification{
             display: none;
             padding: 32px 0
         }
 
-.modal {
-  display: none; 
-  position: fixed; 
-  z-index: 1; 
-  left: 0;
-  top: 0;
-  width: 100%; 
-  height: 100%; 
-  overflow: auto; 
-  background-color: rgba(0,0,0,0.4); 
-}
+        .modal {
+        display: none; 
+        position: fixed; 
+        z-index: 1; 
+        left: 0;
+        top: 0;
+        width: 100%; 
+        height: 100%; 
+        overflow: auto; 
+        background-color: rgba(0,0,0,0.4); 
+        }
 
 
+        .modal-content {
+        position: relative;
+        background-color: #fefefe;
+        margin: 5% auto; 
+        padding: 0;
+        border: 1px solid #888;
+        width: 40%;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+        padding: 20px;
+        }
 
-/* Modal Content */
-.modal-content {
-  position: relative;
-  background-color: #fefefe;
-  margin: 5% auto; 
-  padding: 0;
-  border: 1px solid #888;
-  width: 40%;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-  padding: 20px;
-}
+        .ques{
+            padding: 32px;
+            text-align: center;
+        }
+        button{
+            padding: 4px;
+            background: #fff;
+            border: 1px solid grey;
+            cursor: pointer
+        }
 
-.ques{
-    padding: 32px
-}
-
-.btn-container{
-    padding: 32px;
-    display: flex;
-    justify-content: space-evenly;
-}
+        .btn-container{
+            padding: 32px;
+            display: flex;
+            justify-content: space-evenly;
+        }
     </style>
     <body>
         <button id="clickbtn">Click Me!</button>
         <span id="notification"></span>
-
         <popup-modal
-      ques="Are you sure you want to continue"
-      items='["yes", "cancel"]'
-    ></popup-modal>
+            ques="Are you sure you want to continue"
+            items='["Yes", "Cancel"]'
+        >
+        </popup-modal>
     </body>
 </html>

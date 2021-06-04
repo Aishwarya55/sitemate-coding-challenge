@@ -11,8 +11,8 @@ class PopupModal extends HTMLElement {
     constructor() {
       super();
   
-      this.heading = "";
-      this.subheading = "";
+     
+     
     }
   
     connectedCallback() {
@@ -28,7 +28,6 @@ class PopupModal extends HTMLElement {
         this.handleClick(ev)
     }
     handleClick(i){
-        // var obj = document.getElementById(i)
         var event = new CustomEvent("clickevent", {
             detail: i.target.id
           });
@@ -59,6 +58,7 @@ class PopupModal extends HTMLElement {
   }
   
   customElements.define("popup-modal", PopupModal);
+
   window.addEventListener("clickevent", function(e) { 
       console.log(e) 
       var modal = document.getElementById("myModal");
